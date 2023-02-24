@@ -1,6 +1,6 @@
 
 import { loadHeader, loadImage, loadDescription, createTabs  } from './main-load';
-import { homeTab, homeClicked } from './home-tab';
+import { homeTab, homeClicked } from './tab-module';
 
 // Create header
 createTabs();

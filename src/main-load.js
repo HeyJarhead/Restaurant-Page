@@ -1,5 +1,5 @@
 import Icon from './img/sushi.jpg';
-import { homeClicked, homeTab } from './home-tab';
+import { homeClicked, homeTab } from './tab-module';
 function loadHeader()  { 
     const header = document.createElement('h1');
     header.textContent = "Galatic Sushi";

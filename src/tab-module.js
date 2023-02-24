@@ -23,9 +23,9 @@ function homeClicked() {
     const homeTab = document.getElementById("home");
     const contactTab = document.getElementById("contact");
     const menuTab = document.getElementById("menu");
-    homeTab.className = "test";
-    contactTab.className = "chud";
-    menuTab.className = "dddd";
+    homeTab.className = "";
+    contactTab.className = "hidden";
+    menuTab.className = "hidden";
 }
 export {
     homeTab,
