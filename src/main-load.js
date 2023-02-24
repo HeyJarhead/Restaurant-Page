@@ -1,4 +1,5 @@
 import Icon from './img/sushi.jpg';
+import { homeClicked, homeTab } from './home-tab';
 function loadHeader()  { 
     const header = document.createElement('h1');
     header.textContent = "Galatic Sushi";
@@ -16,29 +17,48 @@ function loadDescription() {
     description.innerHTML = "This sushi will send your taste buds out of this world!"
     return description;
 }
-function homeTab() {
-    const homeContainer = document.createElement('div');
-        const homeStoryHeader = document.createElement('h2');
-        homeStoryHeader.textContent = "What is Galatic Sushi?";
-            const homeStory = document.createElement('p');
-            homeStory.textContent = "Galatic Sushi is the best place for sushi or any other type of fish rolls (also known as Maki.)" +
-            " Mac Lucas, our owner, was wandering around Earth wondering if there was any good sushi restaurants around..." +
-            " unfortunately none were good enough for him. There was no hope. Mac Lucas looked up into the sky and realized" + 
-            " There was hope... Mac Lucas, he had to be the hope and thus Galatic Sushi was born.";
-            homeStoryHeader.appendChild(homeStory);
-        const pitchHeader = document.createElement("h2");
-        pitchHeader.textContent = "Why eat here over other sushi places?";
-            const pitch = document.createElement('p');
-            pitch.textContent = "The Galatic Sushi experience is not like any other experience. Here, you can have the atmoshpere of" +
-            " being in a space lounge while having a top of the line sushi dish at an affordable price."
-            pitchHeader.appendChild(pitch);
-    homeContainer.appendChild(homeStoryHeader);
-    homeContainer.appendChild(pitchHeader);
-    return homeContainer;
+
+function createTabs() {
+    const header = document.createElement('header');
+ document.body.append(header);
+
+// create the navigation container
+const navContainer = document.createElement("nav");
+header.appendChild(navContainer);
+
+// create ul of tabs
+const tabs = document.createElement('ul');
+const home = document.createElement("div");
+home.textContent = "Home";
+home.id = "home";
+home.className = "show";
+home.addEventListener("click", homeClicked);
+// add onclick listener fuction 
+
+const menu = document.createElement("div");
+menu.textContent = "Menu";
+menu.id = "menu";
+menu.className = "hidden";
+
+// add a menu of dishes
+// add css hidden tag
+// add onclick listener function
+const contact = document.createElement('div');
+contact.textContent = "Contact";
+contact.id = "contact";
+contact.className = "hidden";
+// add hours and contacts 
+// add css hidden tag 
+// add onclick listner function
+navContainer.appendChild(tabs);
+tabs.appendChild(home);
+tabs.appendChild(menu);
+tabs.appendChild(contact);
+navContainer.appendChild(homeTab());
 }
 export {
     loadHeader,
     loadImage,
     loadDescription,
-    homeTab
+    createTabs
 };
