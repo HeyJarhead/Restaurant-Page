@@ -19,6 +19,15 @@ function homeTab() {
     homeContainer.appendChild(pitchHeader);
     return homeContainer;
 }
+function homeClicked() {
+    const homeTab = document.getElementById("home");
+    const contactTab = document.getElementById("contact");
+    const menuTab = document.getElementById("menu");
+    homeTab.className = "test";
+    contactTab.className = "chud";
+    menuTab.className = "dddd";
+}
 export {
-    homeTab
+    homeTab,
+    homeClicked
 }
