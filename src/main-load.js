@@ -1,7 +1,9 @@
 import Icon from './img/sushi.jpg';
-import { homeClicked, homeTab } from './tab-module';
+import { homeClicked, homeTab, menuClicked, contactClicked } from './tab-module';
+import './style.css';
 function loadHeader()  { 
     const header = document.createElement('h1');
+    header.className = "header";
     header.textContent = "Galatic Sushi";
     return header;
 }
@@ -22,39 +24,42 @@ function createTabs() {
     const header = document.createElement('header');
  document.body.append(header);
 
-// create the navigation container
-const navContainer = document.createElement("nav");
-header.appendChild(navContainer);
+    // create the navigation container
+    const navContainer = document.createElement("nav");
+    header.appendChild(navContainer);
 
-// create ul of tabs
-const tabs = document.createElement('ul');
-const home = document.createElement("div");
-home.textContent = "Home";
-home.id = "home";
-home.className = "show";
-home.addEventListener("click", homeClicked);
-// add onclick listener fuction 
+    // create ul of tabs
+    const tabs = document.createElement('ul');
+    tabs.id = "tabs";
+    const home = document.createElement("div");
+    home.textContent = "Home";
+    home.id = "home";
+    home.className = "unclicked";
+    home.addEventListener("click", homeClicked);
+    // add onclick listener fuction 
 
-const menu = document.createElement("div");
-menu.textContent = "Menu";
-menu.id = "menu";
-menu.className = "hidden";
+    const menu = document.createElement("div");
+    menu.textContent = "Menu";
+    menu.id = "menu";
+    menu.className = "clicked";
+    menu.addEventListener("click", menuClicked);
 
-// add a menu of dishes
-// add css hidden tag
-// add onclick listener function
-const contact = document.createElement('div');
-contact.textContent = "Contact";
-contact.id = "contact";
-contact.className = "hidden";
-// add hours and contacts 
-// add css hidden tag 
-// add onclick listner function
-navContainer.appendChild(tabs);
-tabs.appendChild(home);
-tabs.appendChild(menu);
-tabs.appendChild(contact);
-navContainer.appendChild(homeTab());
+    // add a menu of dishes
+    // add css hidden tag
+    // add onclick listener function
+    const contact = document.createElement('div');
+    contact.textContent = "Contact";
+    contact.id = "contact";
+    contact.className = "clicked";
+    contact.addEventListener("click", contactClicked);
+    // add hours and contacts 
+    // add css hidden tag 
+    // add onclick listner function
+    navContainer.appendChild(tabs);
+    tabs.appendChild(home);
+    tabs.appendChild(menu);
+    tabs.appendChild(contact);
+    navContainer.appendChild(homeTab());
 }
 export {
     loadHeader,
