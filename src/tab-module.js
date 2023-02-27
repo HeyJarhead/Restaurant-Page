@@ -1,4 +1,5 @@
 import './style.css';
+import Founder from './img/MacLucas.jpg' 
 function homeTab() {
     const homeContainer = document.createElement('div');
     homeContainer.id = "show-home";
@@ -40,7 +41,7 @@ function homeClicked() {
     homeTab.className = "clicked";
     contactTab.className = "unclicked";
     menuTab.className = "unclicked";
-    show.replaceWith(test2());
+    show.replaceWith(loadHomeContents());
 }
 function contactClicked() {
     const homeTab = document.getElementById("home");
@@ -67,27 +68,39 @@ function test(){
     const test = document.createElement('div');
     test.id = "test";
     test.textContent = 'test';
+        // Mac Lucas Picture
+        // Mac Lucas name
+        // Restaurant location 
+        // Restaurant number 
+        
+
     return test;
 }
-function test2(){
+function loadHomeContents(){
     const homeContainer = document.createElement('div');
     homeContainer.id = "show-home";
         const homeStoryHeader = document.createElement('h2');
+        homeStoryHeader.className = "header";
         homeStoryHeader.textContent = "What is Galatic Sushi?";
+        homeContainer.appendChild(homeStoryHeader);
             const homeStory = document.createElement('p');
             homeStory.textContent = "Galatic Sushi is the best place for sushi or any other type of fish rolls (also known as Maki.)" +
             " Mac Lucas, our owner, was wandering around Earth wondering if there was any good sushi restaurants around..." +
             " unfortunately none were good enough for him. There was no hope. Mac Lucas looked up into the sky and realized" + 
             " there was hope... Mac Lucas, he had to be the hope and thus Galatic Sushi was born.";
-            homeStoryHeader.appendChild(homeStory);
+            homeContainer.appendChild(homeStory);
+            //homeStoryHeader.appendChild(homeStory);
         const pitchHeader = document.createElement("h2");
+        pitchHeader.className = "header";
         pitchHeader.textContent = "Why eat here over other sushi places?";
+        homeContainer.appendChild(pitchHeader)
             const pitch = document.createElement('p');
             pitch.textContent = "The Galatic Sushi experience is not like any other experience. Here, you can have the atmoshpere of" +
             " being in a space lounge while having a top of the line sushi dish at an affordable price."
-            pitchHeader.appendChild(pitch);
-    homeContainer.appendChild(homeStoryHeader);
-    homeContainer.appendChild(pitchHeader);
+            homeContainer.appendChild(pitch);
+            //pitchHeader.appendChild(pitch);
+    // homeContainer.appendChild(homeStoryHeader);
+    // homeContainer.appendChild(pitchHeader);
     return homeContainer;
 }
 
