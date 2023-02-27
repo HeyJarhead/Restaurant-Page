@@ -12,6 +12,7 @@ function loadImage() {
     const sushiPic = new Image();
     sushiPic.src = Icon;
     return sushiPic;
+    /// img source https://www.japan.go.jp/kizuna/2021/03/sushi_robots.html
 }
 
 function loadDescription() {
@@ -34,14 +35,14 @@ function createTabs() {
     const home = document.createElement("div");
     home.textContent = "Home";
     home.id = "home";
-    home.className = "unclicked";
+    home.className = "clicked";
     home.addEventListener("click", homeClicked);
     // add onclick listener fuction 
 
     const menu = document.createElement("div");
     menu.textContent = "Menu";
     menu.id = "menu";
-    menu.className = "clicked";
+    menu.className = "unclicked";
     menu.addEventListener("click", menuClicked);
 
     // add a menu of dishes
@@ -50,7 +51,7 @@ function createTabs() {
     const contact = document.createElement('div');
     contact.textContent = "Contact";
     contact.id = "contact";
-    contact.className = "clicked";
+    contact.className = "unclicked";
     contact.addEventListener("click", contactClicked);
     // add hours and contacts 
     // add css hidden tag 

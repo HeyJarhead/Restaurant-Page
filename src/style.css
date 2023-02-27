@@ -23,3 +23,14 @@ img {
     display: flex;
     flex-direction: column;
 }
+.header {
+    text-align: center;
+}
+
+.unclicked {
+    opacity: 0.6;
+    
+}
+#menu, #home, #contact {
+    cursor: grab;
+}

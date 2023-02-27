@@ -34,6 +34,9 @@ function homeClicked() {
     const show = document.getElementById("test");
     const contactTab = document.getElementById("contact");
     const menuTab = document.getElementById("menu");
+        if (homeTab.className === "clicked") {
+            return;
+        }
     homeTab.className = "clicked";
     contactTab.className = "unclicked";
     menuTab.className = "unclicked";
@@ -44,6 +47,9 @@ function contactClicked() {
     const show = document.getElementById("show-home");
     const contactTab = document.getElementById("contact");
     const menuTab = document.getElementById("menu");
+        if (contactTab.className === "clicked"){
+        return;
+        }
     homeTab.className = "unclicked";
     contactTab.className = "clicked";
     menuTab.className = "unclicked";
