@@ -282,7 +282,7 @@ function loadMenuContents(){
             const price6 = document.createElement('p');
             price6.className = "item-price";
             price6.textContent = "$2.99";
-            item6.appendChild(price);
+            item6.appendChild(price6);
             container.appendChild(item6);
         return container;
 }
