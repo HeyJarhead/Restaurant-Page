@@ -1,5 +1,10 @@
-.hidden {
-    visibility: hidden;
+body {
+   background-image: url("./img/background.jpg"); 
+   color: yellow;
+}
+#content-container {
+    display: flex;
+    flex-direction: column;
 }
 img {
     display: block;
@@ -19,10 +24,7 @@ img {
     justify-content: space-evenly;
     align-items: center;
 }
-#show-home {
-    display: flex;
-    flex-direction: column;
-}
+
 .header {
     text-align: center;
 }
@@ -33,4 +35,7 @@ img {
 }
 #menu, #home, #contact {
     cursor: grab;
+}
+#show-home {
+    justify-items: center;
 }
