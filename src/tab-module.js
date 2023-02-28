@@ -1,8 +1,8 @@
 import './style.css';
-import Founder from './img/MacLucas.jpg' 
+import Lucas from './img/MacLucas.jpg'  // Image source: ai generated from https://this-person-does-not-exist.com/en 
 function homeTab() {
     const homeContainer = document.createElement('div');
-    homeContainer.id = "show-home";
+    homeContainer.id = "content-container";
         const homeStoryHeader = document.createElement('h2');
         homeStoryHeader.className = "header";
         homeStoryHeader.textContent = "What is Galatic Sushi?";
@@ -32,7 +32,7 @@ function homeTab() {
 /// js will have the change listener 
 function homeClicked() {
     const homeTab = document.getElementById("home");
-    const show = document.getElementById("test");
+    const show = document.getElementById("content-container");
     const contactTab = document.getElementById("contact");
     const menuTab = document.getElementById("menu");
         if (homeTab.className === "clicked") {
@@ -45,7 +45,7 @@ function homeClicked() {
 }
 function contactClicked() {
     const homeTab = document.getElementById("home");
-    const show = document.getElementById("show-home");
+    const show = document.getElementById("content-container");
     const contactTab = document.getElementById("contact");
     const menuTab = document.getElementById("menu");
         if (contactTab.className === "clicked"){
@@ -54,7 +54,7 @@ function contactClicked() {
     homeTab.className = "unclicked";
     contactTab.className = "clicked";
     menuTab.className = "unclicked";
-    show.replaceWith(test());
+    show.replaceWith(loadContactContents());
 }
 function menuClicked() {
     const homeTab = document.getElementById("home");
@@ -64,21 +64,10 @@ function menuClicked() {
     contactTab.className = "unclicked";
     menuTab.className = "clicked";
 }
-function test(){
-    const test = document.createElement('div');
-    test.id = "test";
-    test.textContent = 'test';
-        // Mac Lucas Picture
-        // Mac Lucas name
-        // Restaurant location 
-        // Restaurant number 
-        
 
-    return test;
-}
 function loadHomeContents(){
     const homeContainer = document.createElement('div');
-    homeContainer.id = "show-home";
+    homeContainer.id = "content-container";
         const homeStoryHeader = document.createElement('h2');
         homeStoryHeader.className = "header";
         homeStoryHeader.textContent = "What is Galatic Sushi?";
@@ -103,7 +92,30 @@ function loadHomeContents(){
     // homeContainer.appendChild(pitchHeader);
     return homeContainer;
 }
+function loadContactContents(){
+    const contactContainer = document.createElement('div');
+    contactContainer.id = "content-container";
+        // Mac Lucas Picture
+        const lucasIcon = new Image();
+        lucasIcon.src = Lucas;
+        lucasIcon.className = "lucas";
+        contactContainer.appendChild(lucasIcon);
+        // Mac Lucas name
+        const name = document.createElement('h2')
+        name.className = "header";
+        name.textContent = "Mac Lucas"
+        contactContainer.appendChild(name);
+        // Lucas Email
+        const email = document.createElement("div")
+        email.textContent = "MacLucas87@fakeemail.com";
+        contactContainer.appendChild(email);
+        // Lucas number 
+        const number = document.createElement("div");
+        number.textContent = "555-555-5555";
+        contactContainer.appendChild(number);
 
+    return contactContainer;
+}
 export {
     homeTab,
     homeClicked,
