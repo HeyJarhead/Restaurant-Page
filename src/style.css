@@ -1,16 +1,21 @@
+
 body {
    background-image: url("./img/background.jpg"); 
    color: yellow;
+   min-width: auto;
 }
+
 #content-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 img {
     display: block;
     width: 300px;
     height: auto;
     border-radius: 25%;
+    box-shadow: 0px 0px 20px rgba(57, 184, 235, 0.74);
 }
 #container {
     display: flex;
@@ -26,7 +31,35 @@ img {
 }
 
 .header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;;
+    font-size: 45px;
     text-align: center;
+    text-decoration: underline overline;
+    /* background-color: rgba(253, 249, 6, 0.233); */
+   
+}
+.header-name{
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.description{
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 450;
+    font-style: italic;
+    text-align: center;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .unclicked {

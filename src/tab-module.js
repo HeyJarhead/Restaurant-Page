@@ -110,7 +110,7 @@ function loadContactContents(){
         contactContainer.appendChild(lucasIcon);
         // Mac Lucas name
         const name = document.createElement('h2')
-        name.className = "header";
+        name.className = "header-name";
         name.textContent = "Mac Lucas"
         contactContainer.appendChild(name);
         // Lucas Email
