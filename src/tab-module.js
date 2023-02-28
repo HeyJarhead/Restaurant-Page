@@ -276,7 +276,7 @@ function loadMenuContents(){
             // description
             const description6 = document.createElement('p');
             description6.className = "item-description";
-            description6.textContent = "A large size fizzy space drink";
+            description6.textContent = "A large size fizzy space drink.";
             item6.appendChild(description6);
             // price
             const price6 = document.createElement('p');
