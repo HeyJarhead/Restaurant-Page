@@ -3,7 +3,7 @@ import { homeClicked, homeTab, menuClicked, contactClicked } from './tab-module'
 import './style.css';
 function loadHeader()  { 
     const header = document.createElement('h1');
-    header.className = "header";
+    header.className = "header-main";
     header.textContent = "Galatic Sushi";
     return header;
 }
@@ -17,6 +17,7 @@ function loadImage() {
 
 function loadDescription() {
     const description = document.createElement('div');
+    description.className = "description";
     description.innerHTML = "This sushi will send your taste buds out of this world!"
     return description;
 }

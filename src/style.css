@@ -35,13 +35,20 @@ img {
     font-style: italic;;
     font-size: 45px;
     text-align: center;
-    text-decoration: underline overline;
+    text-decoration: underline;
     /* background-color: rgba(253, 249, 6, 0.233); */
    
 }
 .header-name{
     margin-bottom: 5px;
     margin-top: 20px;
+}
+.lucas{
+    margin-top: 45px;
+}
+.header-main{
+    font-size: 60px;
+    text-decoration: underline overline;
 }
 .description{
     font-size: 20px;
