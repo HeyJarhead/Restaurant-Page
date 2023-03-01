@@ -8,6 +8,7 @@ import Pic5 from './img/boba.jpg';
 import Pic6 from './img/cola.jpg';
 // shows Home tab by default
 function homeTab() {
+    // create home container, create header and description
     const homeContainer = document.createElement('div');
     homeContainer.id = "content-container";
         const homeStoryHeader = document.createElement('h2');
@@ -19,8 +20,9 @@ function homeTab() {
             " Mac Lucas, our owner, was wandering around Earth wondering if there was any good sushi restaurants around..." +
             " unfortunately none were good enough for him. There was no hope. Mac Lucas looked up into the sky and realized" + 
             " there was hope... Mac Lucas, he had to be the hope and thus Galatic Sushi was born.";
-            homeContainer.appendChild(homeStory);
-            //homeStoryHeader.appendChild(homeStory);
+        homeContainer.appendChild(homeStory);
+         
+        // create header and description
         const pitchHeader = document.createElement("h2");
         pitchHeader.className = "header";
         pitchHeader.textContent = "Why eat here over other sushi places?";
@@ -28,10 +30,21 @@ function homeTab() {
             const pitch = document.createElement('p');
             pitch.textContent = "The Galatic Sushi experience is not like any other experience. Here, you can have the atmoshpere of" +
             " being in a space lounge while having a top of the line sushi dish at an affordable price."
-            homeContainer.appendChild(pitch);
-            //pitchHeader.appendChild(pitch);
-    // homeContainer.appendChild(homeStoryHeader);
-    // homeContainer.appendChild(pitchHeader);
+        homeContainer.appendChild(pitch);
+           
+        // create restaurant hours with header out bordered container
+        const hoursContainer = document.createElement('div');
+        hoursContainer.className = "hours-container";
+            const hoursTitle = document.createElement('h2');
+            hoursTitle.className = "header";
+            hoursTitle.textContent = "Business Hours";
+            hoursContainer.appendChild(hoursTitle);
+            const businessHours = document.createElement('p')
+            businessHours.textContent = "Monday - Friday:\t 10:00 a.m. - 9:00 p.m." + 
+            "\nSaturday:\t 10:00 a.m. - 10:00 p.m." + "\nSunday:\t 11:00 a.m. - 8:30 p.m.";
+            hoursContainer.appendChild(businessHours);
+        homeContainer.appendChild(hoursContainer);
+
     return homeContainer;
 }
 // updates Home DOM
@@ -75,6 +88,7 @@ function menuClicked() {
 }
 // swap to the Home DOM
 function loadHomeContents(){
+    // create home container, create header and description
     const homeContainer = document.createElement('div');
     homeContainer.id = "content-container";
         const homeStoryHeader = document.createElement('h2');
@@ -86,8 +100,9 @@ function loadHomeContents(){
             " Mac Lucas, our owner, was wandering around Earth wondering if there was any good sushi restaurants around..." +
             " unfortunately none were good enough for him. There was no hope. Mac Lucas looked up into the sky and realized" + 
             " there was hope... Mac Lucas, he had to be the hope and thus Galatic Sushi was born.";
-            homeContainer.appendChild(homeStory);
-            //homeStoryHeader.appendChild(homeStory);
+        homeContainer.appendChild(homeStory);
+
+        // create header and description
         const pitchHeader = document.createElement("h2");
         pitchHeader.className = "header";
         pitchHeader.textContent = "Why eat here over other sushi places?";
@@ -95,10 +110,21 @@ function loadHomeContents(){
             const pitch = document.createElement('p');
             pitch.textContent = "The Galatic Sushi experience is not like any other experience. Here, you can have the atmoshpere of" +
             " being in a space lounge while having a top of the line sushi dish at an affordable price."
-            homeContainer.appendChild(pitch);
-            //pitchHeader.appendChild(pitch);
-    // homeContainer.appendChild(homeStoryHeader);
-    // homeContainer.appendChild(pitchHeader);
+        homeContainer.appendChild(pitch);
+
+        // create restaurant hours with header out bordered container
+        const hoursContainer = document.createElement('div');
+        hoursContainer.className = "hours-container";
+            const hoursTitle = document.createElement('h2');
+            hoursTitle.className = "header";
+            hoursTitle.textContent = "Business Hours";
+            hoursContainer.appendChild(hoursTitle);
+            const businessHours = document.createElement('p')
+            businessHours.textContent = "Monday - Friday:\t 10:00 a.m. - 9:00 p.m." + 
+            "\nSaturday:\t 10:00 a.m. - 10:00 p.m." + "\nSunday:\t 11:00 a.m. - 8:30 p.m.";
+            hoursContainer.appendChild(businessHours);
+        homeContainer.appendChild(hoursContainer);
+
     return homeContainer;
 }
 // swap to the Contact DOM
