@@ -30,7 +30,7 @@ img {
     align-items: center;
 }
 
-.header {
+.header, .header-business {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;;
     font-size: 45px;
@@ -78,4 +78,16 @@ p {
 }
 #show-home {
     justify-items: center;
+}
+.hours-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header-business{
+    margin-bottom: 10px;
 }
