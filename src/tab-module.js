@@ -6,6 +6,7 @@ import Pic3 from './img/uramaki.png';
 import Pic4 from './img/spicy.png';
 import Pic5 from './img/boba.jpg';
 import Pic6 from './img/cola.jpg';
+// shows Home tab by default
 function homeTab() {
     const homeContainer = document.createElement('div');
     homeContainer.id = "content-container";
@@ -33,9 +34,7 @@ function homeTab() {
     // homeContainer.appendChild(pitchHeader);
     return homeContainer;
 }
-/// html will change class name to hidden on the specific tab
-/// css will hide any class name with hidden
-/// js will have the change listener 
+// updates Home DOM
 function homeClicked() {
     const homeTab = document.getElementById("home");
     const show = document.getElementById("content-container");
@@ -49,6 +48,7 @@ function homeClicked() {
     menuTab.className = "unclicked";
     show.replaceWith(loadHomeContents());
 }
+// updates Contact DOM
 function contactClicked() {
     const homeTab = document.getElementById("home");
     const show = document.getElementById("content-container");
@@ -62,6 +62,7 @@ function contactClicked() {
     menuTab.className = "unclicked";
     show.replaceWith(loadContactContents());
 }
+// updates Menu DOM
 function menuClicked() {
     const homeTab = document.getElementById("home");
     const show = document.getElementById("content-container");
@@ -72,7 +73,7 @@ function menuClicked() {
     menuTab.className = "clicked";
     show.replaceWith(loadMenuContents());
 }
-
+// swap to the Home DOM
 function loadHomeContents(){
     const homeContainer = document.createElement('div');
     homeContainer.id = "content-container";
@@ -100,6 +101,7 @@ function loadHomeContents(){
     // homeContainer.appendChild(pitchHeader);
     return homeContainer;
 }
+// swap to the Contact DOM
 function loadContactContents(){
     const contactContainer = document.createElement('div');
     contactContainer.id = "content-container";
@@ -121,9 +123,14 @@ function loadContactContents(){
         const number = document.createElement("div");
         number.textContent = "555-555-5555";
         contactContainer.appendChild(number);
+        // Lucas Location
+        const location = document.createElement('div');
+        location.textContent = "4190 Starwood Avenue, Fresno, California "
+        contactContainer.appendChild(location);
 
     return contactContainer;
 }
+// swap to the Menu DOM
 function loadMenuContents(){
     //Main contentcontainer 
     const container = document.createElement('div');
@@ -192,8 +199,8 @@ function loadMenuContents(){
             item3.appendChild(uramaki);
             // title
             const title3 = document.createElement('h2');
-            title.className = "item-title";
-            title.textContent = "Uranus Uramaki";
+            title3.className = "item-title";
+            title3.textContent = "Uranus Uramaki";
             item3.appendChild(title3);
             // description
             const description3 = document.createElement('p');
