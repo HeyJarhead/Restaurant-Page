@@ -36,7 +36,7 @@ function homeTab() {
         const hoursContainer = document.createElement('div');
         hoursContainer.className = "hours-container";
             const hoursTitle = document.createElement('h2');
-            hoursTitle.className = "header";
+            hoursTitle.className = "header-business";
             hoursTitle.textContent = "Business Hours";
             hoursContainer.appendChild(hoursTitle);
             const businessHours = document.createElement('p')
@@ -116,7 +116,7 @@ function loadHomeContents(){
         const hoursContainer = document.createElement('div');
         hoursContainer.className = "hours-container";
             const hoursTitle = document.createElement('h2');
-            hoursTitle.className = "header";
+            hoursTitle.className = "header-business";
             hoursTitle.textContent = "Business Hours";
             hoursContainer.appendChild(hoursTitle);
             const businessHours = document.createElement('p')
