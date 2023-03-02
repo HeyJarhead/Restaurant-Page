@@ -90,4 +90,11 @@ p {
 }
 .header-business{
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+.item-price {
+    margin-bottom: 40px;
+}
+.item-description {
+    margin-bottom: 0px;
 }
