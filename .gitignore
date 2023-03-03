@@ -13,9 +13,3 @@ node_modules
 # Ignore SASS config files
 .sass-cache
 
-### Font ###
-*.fnt
-*.fon
-*.otf
-*.ttf
-
